@@ -1,0 +1,12 @@
+version: '3'
+services:
+    web:
+        container_name: unbound-dns
+        build:
+            context: .
+
+        volumes:
+            - ./unbound.conf:/etc/unbound/unbound.conf
+        ports:
+            - "53:53"
+
